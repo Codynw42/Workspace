@@ -1,20 +1,21 @@
 import pygame
-import os  
+import os
 
 
 FPS = 60
 WHITE = (255, 255, 255)
 WIDTH, HEIGHT = 1400, 800
+
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
+TEMPLE = pygame.transform.scale(pygame.image.load(os.path.join('Assets', 'Temple_Time.jpeg')), (WIDTH, HEIGHT))
 
 
 
 def draw_surface():
     WIN.fill((WHITE))
+    WIN.blit(TEMPLE, (0, 0))
     pygame.display.update()
     
-
-
 
 
 def mainloop():                     
